@@ -1,0 +1,133 @@
+/* © Victor Loots, 2022
+/*
+/* Fonts */
+@font-face {
+  font-family: "domineregular";
+  src: url("../fonts/domine-regular-webfont.eot");
+  src: url("../fonts/domine-regular-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/domine-regular-webfont.woff2") format("woff2"),
+    url("../fonts/domine-regular-webfont.woff") format("woff"),
+    url("../fonts/domine-regular-webfont.ttf") format("truetype"),
+    url("../fonts/domine-regular-webfont.svg#domineregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "montserratregular";
+  src: url("../fonts/montserrat-regular-webfont.eot");
+  src: url("../fonts/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/montserrat-regular-webfont.woff2") format("woff2"),
+    url("../fonts/montserrat-regular-webfont.woff") format("woff"),
+    url("../fonts/montserrat-regular-webfont.ttf") format("truetype"),
+    url("../fonts/montserrat-regular-webfont.svg#montserratregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "open_sansregular";
+  src: url("../fonts/opensans-regular-webfont.eot");
+  src: url("../fonts/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/opensans-regular-webfont.woff2") format("woff2"),
+    url("../fonts/opensans-regular-webfont.woff") format("woff"),
+    url("../fonts/opensans-regular-webfont.ttf") format("truetype"),
+    url("../fonts/opensans-regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+/* Variabelen */
+:root {
+  --font_titel: "domineregular", Georgia, serif;
+  --font_subtitel: "montserratregular", Verdana, sans-serif;
+  --font-brood: "open_sansregular", Verdana, sans-serif;
+  --kleur_wit: #f8f7f3;
+  --kleur_zwart: #303030;
+}
+
+/* 
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+/* Standards */
+body {
+  min-height: 100%;
+  color: var(--kleur_zwart);
+  background-color: var(--kleur_wit);
+  font-family: var(--font-brood);
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+
+#blend_mode_selector{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 500px;
+  min-height: 100vh;
+  position: fixed;
+  left: calc(50% - 250px);
+  z-index: 2;
+ 
+}
+h1 {
+  font-family: var(--font_titel);
+  font-size: 5rem;
+  letter-spacing: -0.5rem;
+  color: #FF731F;
+  position: absolute;
+}
+h1 span:nth-child(odd) {
+  color: #FF8251;  
+}
+select {
+  display: block;
+  width: 160px;
+  border-radius: 20px;
+  height: 2rem;
+  font-size: 1rem;
+  color: white;
+  position: absolute;
+  left: calc(50% - 80px);
+  margin-top: 10%;
+  background: #FF731F;
+}
+select option {
+   padding: 1rem; 
+}
+
+.grid_sizer,
+.grid_item {
+  width: 50%;
+}
+
+.grid_item {
+  position: relative;
+  float: left;
+
+}
+
+
+.grid_height_200 {
+  height: 200px;
+
+}
+.grid_height_400 {
+  height:400px;
+ 
+}
+footer{
+  display: flex;
+  justify-content: space-around;
+  font-family: var(--font_subtitel);
+  padding: 4rem 0 2rem 0;
+}
